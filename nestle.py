@@ -1,10 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 29 14:37:32 2019
 
-@author: aditi
-"""
+#@author: aditi
+
 
 import numpy as np
 import nestle
