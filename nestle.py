@@ -23,7 +23,7 @@ if np.abs(np.min(data[1]))>np.abs(np.max(data[1])): A_lim=np.abs(np.min(data[1])
 else: A_lim=np.abs(np.max(data[1]))
 
 
-#====================FOR CONSTANT FIT=================================
+#====================FOR CONSTANT MODEL====================================
 def const(k, x):
     return k*x**0
 
@@ -63,7 +63,7 @@ def nestle_multi1():
     
 Z1=nestle_multi1()
 
-#======================FOR COSINE MODEL=========================
+#============================FOR COSINE MODEL===================================
 
 def cosine(x,theta):
 	A = theta[0]
@@ -117,9 +117,9 @@ def nestle_multi2():
     print( np.std(samples_nestle[:,2])    )  # standard deviation of t0 samples
     print(len(samples_nestle))              # number of posterior samples
     
-    return res.logz,samples_nestle
+    return res.logz
     
-Z2, samples_t0 = nestle_multi2()
+Z2 = nestle_multi2()
 
 Z=np.exp(Z2-Z1)
 print ('Bayes factor=',Z)
