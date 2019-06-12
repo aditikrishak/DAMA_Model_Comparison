@@ -36,7 +36,7 @@ def prior_transform1(k):
 def nestle_multi1():
     # Run nested sampling
     res = nestle.sample(loglike1, prior_transform1, 1, method='multi',
-                    npoints=1000)
+                    npoints=2000)
     print(res.summary())
 
     # weighted average and covariance:
@@ -89,7 +89,7 @@ def prior_transform2(theta):
 def nestle_multi2():
     # Run nested sampling
     res = nestle.sample(loglike2, prior_transform2, 3, method='multi',
-                    npoints=1000)
+                    npoints=2000)
     print(res.summary())
 
     # weighted average and covariance:
