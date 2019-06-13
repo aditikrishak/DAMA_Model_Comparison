@@ -15,6 +15,7 @@ y=data[1]
 xerr=data[2]
 yerr=data[3]
 
+#to find A_lim value
 if np.abs(np.min(data[1]))>np.abs(np.max(data[1])): A_lim=np.abs(np.min(data[1]))
 else: A_lim=np.abs(np.max(data[1]))
 
